@@ -11,6 +11,7 @@ def cls():
 
 
 def search(query):
+    ## Returns a list of dictionaries containing the search results from libgen.rs.
     search_base = "http://libgen.rs/search.php?req={}&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def"
     search_page = search_base.format(query.replace(' ', '+'))
     page = requests.get(search_page)
@@ -48,6 +49,7 @@ def search(query):
 
 
 def decide(results):
+    ## Returns the most recent PDF result, or the most recent EPUB result if no PDFs are found.
     if results != []:
         epubs_with_year = []
         epubs_without_year = []
@@ -76,131 +78,92 @@ def decide(results):
                         pdfs_without_year.append(result)
                 else:
                     pass
-            pdfs_without_year = sorted(
-                pdfs_with_year, key=lambda i: i['year'], reverse=True)
+            pdfs = sorted(pdfs_without_year,
+                           key=lambda i: i['year'], reverse=True)
             if pdfs_with_year != []:
                 return pdfs_with_year[0]
             elif pdfs_without_year != []:
-                return pdfs_without_year[0]
+                return pdfs[0]
             else:
                 return None
     else:
         return None
 
-## Decision can be removed
-def mirrors(decision):
-    page = requests.get(decision['url'])
-    raw_html = page.text
-    soup = BS(raw_html, features='html5lib')
-    mirrors_messed = soup.find_all(valign="top")[-4]
-    mirrors_better = mirrors_messed.find_all(name='a')
-    mirrors = []
-    for mirror in mirrors_better[:4]:
-        item = {}
-        item['name'] = mirror.get('title')
-        item['url'] = mirror.get('href')
-        mirrors.append(item)
-    return mirrors
-
-## Mirrors have to be used interchangably
-
-def mirror_to_url(mirrors, mirror):
-    if mirror == 'gen-lib-rus-ec':
-        redirect = mirrors[0]['url']
-        page = requests.get(redirect)
-        raw_html = page.text
-        soup = BS(raw_html, features='html5lib')
-        url = soup.h2.find(name='a').get('href')
-        return url
-    if mirror == 'libgen-lc':
-        redirect = mirrors[1]['url']
-        page = requests.get(redirect)
-        raw_html = page.text
-        soup = BS(raw_html, features='html5lib')
-        url = soup.body.table.tbody.tr.find_all(
-            'td')[1].find(name='a').get('href')
-        return url
-    else:
-        pass
-
-
 def download(url, save_name):
+    ###Downloads the file at the given URL and saves it as the given file name.
+    print(f"Downloading {save_name}...")
     wget.download(url, out=save_name)
 
 
-seperator = 126 * '━'
-
-## Logging has to happen in Google sheet file
-
-def do_it_all(book, mirror):
-    try:
-        print("DOWNLOADING...")
-        print(f"Title: \"{book['title']}\"\nAuthor: \"{book['author']}\"")
-        query = book['title'] + ' ' + book['author']
-        entries = search(query)
-        if entries != []:
-            decision = decide(entries)
-            mirrs = mirrors(decision)
-            download_url = mirror_to_url(mirrs, mirror)
-            print("Mirror:", mirror)
-            print("URL:", download_url, sep='\n')
-            save_name = book['title'] + ' - ' + \
-                book['author'] + '.' + decision['extension']
-            download(download_url, save_name)
-            book['downloaded'] = True
-            print("\nDOWNLOADED ✅")
-            print(f"Downloaded\"{book['title']}\" by \"{book['author']}.\"")
-            print(seperator)
-            save()
-        else:
-            print("NOT FOUND ❌")
-            print("Couldn't find a confident file. Try this yourself.")
-            print(seperator)
-            book['downloaded'] = 'not-found'
-    except (ValueError, TypeError, IndexError, FileNotFoundError, AttributeError, EOFError, KeyError):
-        book['downloaded'] = 'error'
-        print("INTERNAL ERROR 🛑")
-        print("Something came up. Try this yourself.")
-        print(seperator)
-        save()
+def log_download(book, mirror, save_name):
+    """Logs the download of the book to a AIRTABLE."""
+    # https://airtable.com/shrfhyd0hiRYYbnW6
+    # https://airtable.com/appHTvuP660oTKhCl/tblElnRb1VtSuvmJY/viwiD6Rgq1rcGOujn?blocks=hide
+    # API KEY: patW3oFhNZjcIsWOO.c38b88dd3f6ac0123a28480621ac4a38637e92e717ce22b074e2ef545a362cdb
 
 
-def save():
-    global books
-    target = open('book-list.txt', 'w')
+def main():
+    ##The main function of the script.
+    cls()
+    mirror = input("Select your preferred mirror.\n"
+                   "1. Gen.lib.rus.ec\n"
+                   "2. Libgen.lc\n> ")
+    if mirror == "1":
+        mirror = "gen-lib-rus-ec"
+    elif mirror == "2":
+        mirror = "libgen-lc"
+    else:
+        print("Invalid mirror.")
+        return
+    books = []
+    url = "https://api.airtable.com/v0/appHTvuP660oTKhCl/tblElnRb1VtSuvmJY"
+    headers = {
+        "Authorization": "Bearer patW3oFhNZjcIsWOO.c38b88dd3f6ac0123a28480621ac4a38637e92e717ce22b074e2ef545a362cdb"
+    }
+    response = requests.get(url, headers=headers)
+    data = response.json()
+    for record in data["records"]:
+        book = {
+            "title": record["fields"]["Title"],
+            "author": record["fields"]["Author"],
+            "downloaded": record["fields"]["Downloaded"]
+        }
+        books.append(book)
     for book in books:
-        target.write(str(book))
-        target.write('\n')
-
-## This has to be loaded from a google sheets file
-
-
-def start(mirror):
-    for book in books:
-        if book['downloaded'] == False:
+        if book["downloaded"] is False:
             do_it_all(book, mirror)
-        else:
-            print("SKIPPED THIS BOOK ⏭")
-            print(f"\"{book['title']}\" by \"{book['author']}\" is either downloaded or you have opted out. Moving on...")
-            print(seperator)
     print("BOOK LIST:")
     for book in books:
-        downloaded_status = 'Downloaded ✅' if book['downloaded'] else 'Not Downloaded ❌'
+        downloaded_status = "Downloaded" if book["downloaded"] else "Not Downloaded"
         print(f"Title: {book['title']}\nAuthor: {book['author']}\nStatus: {downloaded_status}")
-        print(seperator)
 
 
-cls()
-prompt = "Select your preferred mirror.\n"
-prompt += "1. Gen.lib.rus.ec\n"
-prompt += "2. Libgen.lc\n> "
-mirror_index = int(input(prompt))
-if mirror_index == 1:
-    mirror = 'gen-lib-rus-ec'
-elif mirror_index == 2:
-    mirror = 'libgen-lc'
-else:
-    pass
+def main():
+    ##The main function of the script.
+    cls()
+    mirror = input("Select your preferred mirror.\n"
+                   "1. Gen.lib.rus.ec\n"
+                   "2. Libgen.lc\n> ")
+    if mirror == "1":
+        mirror = "gen-lib-rus-ec"
+    elif mirror == "2":
+        mirror = "libgen-lc"
+    else:
+        print("Invalid mirror.")
+        return
+    books = []
+    with open("book-list.txt", "r") as f:
+        for line in f:
+            book = json.loads(line)
+            books.append(book)
+    for book in books:
+        if book["downloaded"] is False:
+            do_it_all(book, mirror)
+    print("BOOK LIST:")
+    for book in books:
+        downloaded_status = "Downloaded" if book["downloaded"] else "Not Downloaded"
+        print(f"Title: {book['title']}\nAuthor: {book['author']}\nStatus: {downloaded_status}")
 
-start(mirror)
 
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,21 @@
+topics = [
+    "Participatory Economics",
+    "Peer-to-peer Economy",
+    "Post-scarcity Economy",
+    "Donut Economics",
+    "Degrowth",
+    "GDP Alternatives",
+    "Distributed Networks",
+    "Mutual Credit",
+    "Local Exchange Trading Systems",
+    "Time-based Currency",
+    "Time Banking",
+    "Universal Basic Income",
+    "Regenerative Economics",
+    "Complementary Currencies",
+    "Commons-Based Peer Production",
+    "Participatory Budgeting",
+    "Local Currency Systems",
+    "Open Cooperatives",
+    "Democratic Finance"
+]

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+table td {
+	vertical-align: top;
+}
+#message {
+	width: 400px;
+	margin: 0px auto;
+	padding: 10px 20px;
+	text-align: center;	
+	background-color: #0f9d58;
+	color: #fff;
+	border-radius: 3px;
+}
+#info {
+	max-width: 700px;
+	padding: 10px;
+	border: 1px solid #C0C0C0;
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-size: 0.8em;
+}
+#info img {
+	display: block;
+	width: 240px;
+	max-width: 240px;
+	margin: 3px auto;
+}
+#download {
+	text-align: center;
+}
+#download ul {
+	margin: 0.8em 0 0 0;
+}
+#download ul li {
+	display: inline-block;
+}
+#download ul li a {
+	display: block !important;
+	min-width: 5.5em;
+	margin: 0 5px;
+	padding: 4px;
+	border: 1px solid blue;
+	border-radius: 7px;
+	text-decoration: none;
+	text-align: center;
+}
+#download ul li sup>a {
+	width: auto;
+	border: 0;
+}
+.adsbygoogle {
+	margin: 7px;
+}
+</style>
+<script src="/jquery-latest.min.js"></script>
+</head>
+<body>
+<table width="100%" align="center" border="0">
+<tr>
+	<td class="ad"></td>
+	<td id="info">				<div id="download">
+		<h2><a href="http://62.182.86.140/main/649000/1ab6da37a9bee3bcc819feba699f0f62/Erik%20Olin%20Wright%20-%20Envisioning%20Real%20Utopias-Verso%20%282010%29.pdf">GET</a></h2>
+				<div><em>FASTER</em> Download from an IPFS distributed storage, choose any gateway:</div>
+		<ul>
+		<li><a href="https://cloudflare-ipfs.com/ipfs/bafykbzacebnkp5i4ffxpqqwixffazd7gwsemnp2qfbrakrafrbgrikcqzmsne?filename=Erik%20Olin%20Wright%20-%20Envisioning%20Real%20Utopias-Verso%20%282010%29.pdf">Cloudflare</a></li><li><a href="https://gateway.ipfs.io/ipfs/bafykbzacebnkp5i4ffxpqqwixffazd7gwsemnp2qfbrakrafrbgrikcqzmsne?filename=Erik%20Olin%20Wright%20-%20Envisioning%20Real%20Utopias-Verso%20%282010%29.pdf">IPFS.io</a></li><li><a href="https://gateway.pinata.cloud/ipfs/bafykbzacebnkp5i4ffxpqqwixffazd7gwsemnp2qfbrakrafrbgrikcqzmsne?filename=Erik%20Olin%20Wright%20-%20Envisioning%20Real%20Utopias-Verso%20%282010%29.pdf">Pinata</a></li><li><a href="http://localhost:8080/ipfs/bafykbzacebnkp5i4ffxpqqwixffazd7gwsemnp2qfbrakrafrbgrikcqzmsne?filename=Erik%20Olin%20Wright%20-%20Envisioning%20Real%20Utopias-Verso%20%282010%29.pdf">local gateway</a></li>		</ul>
+				<h2><a href="http://libgenfrialc7tguyjywa36vtrdcplwpxaw43h6o63dmmwhvavo5rqqd.onion/LG/0649000/1ab6da37a9bee3bcc819feba699f0f62/Erik%20Olin%20Wright%20-%20Envisioning%20Real%20Utopias-Verso%20%282010%29.pdf">download from the Tor mirror</a><br><span style="font-size:70%">(make sure you're accessing via <a href="https://www.howtogeek.com/272049/how-to-access-.onion-sites-also-known-as-tor-hidden-services/">Tor</a>)</span></h2>
+		</div>
+				<h1>Envisioning Real Utopias</h1>
+		<div><img src="/covers/649000/1ab6da37a9bee3bcc819feba699f0f62-d.jpg" alt="cover"></div>
+		<p>Author(s): Erik Olin Wright</p>				<p>Publisher: Verso, Year: 2010</p>
+		<p>ISBN: 184467617X,9781844676170,1844676188,9781844676187</p>		<p style="text-align:center"><a href="https://www.worldcat.org/search?qt=worldcat_org_bks&q=Envisioning%20Real%20Utopias&fq=dt%3Abks">Search in WorldCat</a> | <a href="https://www.goodreads.com/search?utf8=✓&query=Envisioning%20Real%20Utopias">Search in Goodreads</a> | <a href="https://www.abebooks.com/servlet/SearchResults?tn=Envisioning%20Real%20Utopias&pt=book&cm_sp=pan-_-srp-_-ptbook">Search in AbeBooks</a> | <a href="https://www.amazon.com/s/?url=search-alias%3Dstripbooks&field-keywords=Envisioning%20Real%20Utopias">Search in Amazon.com</a></p>
+				<div>Description:<br>A leading sociologist proposes a new framework for a socialist alternative.Rising inequality of income and power, along with recent convulsions in the finance sector, have made the search for alternatives to unbridled capitalism more urgent than ever. Yet few are attempting this task—most analysts argue that any attempt to rethink our social and economic relations is utopian. Erik Olin Wright’s major new work is a comprehensive assault on the quietism of contemporary social theory. A systematic reconstruction of the core values and feasible goals for Left theorists and political actors, Envisioning Real Utopias lays the foundations for a set of concrete, emancipatory alternatives to the capitalist system. Characteristically rigorous and engaging, this will become a landmark of social thought for the twenty-first century.</div>		</td>
+	<td class="ad"></td>
+</tr>
+</table>
+</body>
+</html>

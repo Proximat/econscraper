@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+table td {
+	vertical-align: top;
+}
+#message {
+	width: 400px;
+	margin: 0px auto;
+	padding: 10px 20px;
+	text-align: center;	
+	background-color: #0f9d58;
+	color: #fff;
+	border-radius: 3px;
+}
+#info {
+	max-width: 700px;
+	padding: 10px;
+	border: 1px solid #C0C0C0;
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-size: 0.8em;
+}
+#info img {
+	display: block;
+	width: 240px;
+	max-width: 240px;
+	margin: 3px auto;
+}
+#download {
+	text-align: center;
+}
+#download ul {
+	margin: 0.8em 0 0 0;
+}
+#download ul li {
+	display: inline-block;
+}
+#download ul li a {
+	display: block !important;
+	min-width: 5.5em;
+	margin: 0 5px;
+	padding: 4px;
+	border: 1px solid blue;
+	border-radius: 7px;
+	text-decoration: none;
+	text-align: center;
+}
+#download ul li sup>a {
+	width: auto;
+	border: 0;
+}
+.adsbygoogle {
+	margin: 7px;
+}
+</style>
+<script src="/jquery-latest.min.js"></script>
+</head>
+<body>
+<table width="100%" align="center" border="0">
+<tr>
+	<td class="ad"></td>
+	<td id="info">				<div id="download">
+		<h2><a href="http://62.182.86.140/main/2197000/a563d59d3f5b497740badf1429548e98/John%20Asimakopoulos%2C%20Richard%20Gilman-Opalsky%20%28eds.%29%20-%20Against%20Capital%20in%20the%20Twenty-First%20Century_%20A%20Reader%20of%20Radical%20Undercurrents-Temple%20University%20Press%20%282018%29.pdf">GET</a></h2>
+				<div><em>FASTER</em> Download from an IPFS distributed storage, choose any gateway:</div>
+		<ul>
+		<li><a href="https://cloudflare-ipfs.com/ipfs/bafykbzacedd6gngnpsrmahlgkn6ewpsijvoo6nuhpimd7dxezvzzp72pl4cya?filename=John%20Asimakopoulos%2C%20Richard%20Gilman-Opalsky%20%28eds.%29%20-%20Against%20Capital%20in%20the%20Twenty-First%20Century_%20A%20Reader%20of%20Radical%20Undercurrents-Temple%20University%20Press%20%282018%29.pdf">Cloudflare</a></li><li><a href="https://gateway.ipfs.io/ipfs/bafykbzacedd6gngnpsrmahlgkn6ewpsijvoo6nuhpimd7dxezvzzp72pl4cya?filename=John%20Asimakopoulos%2C%20Richard%20Gilman-Opalsky%20%28eds.%29%20-%20Against%20Capital%20in%20the%20Twenty-First%20Century_%20A%20Reader%20of%20Radical%20Undercurrents-Temple%20University%20Press%20%282018%29.pdf">IPFS.io</a></li><li><a href="https://gateway.pinata.cloud/ipfs/bafykbzacedd6gngnpsrmahlgkn6ewpsijvoo6nuhpimd7dxezvzzp72pl4cya?filename=John%20Asimakopoulos%2C%20Richard%20Gilman-Opalsky%20%28eds.%29%20-%20Against%20Capital%20in%20the%20Twenty-First%20Century_%20A%20Reader%20of%20Radical%20Undercurrents-Temple%20University%20Press%20%282018%29.pdf">Pinata</a></li><li><a href="http://localhost:8080/ipfs/bafykbzacedd6gngnpsrmahlgkn6ewpsijvoo6nuhpimd7dxezvzzp72pl4cya?filename=John%20Asimakopoulos%2C%20Richard%20Gilman-Opalsky%20%28eds.%29%20-%20Against%20Capital%20in%20the%20Twenty-First%20Century_%20A%20Reader%20of%20Radical%20Undercurrents-Temple%20University%20Press%20%282018%29.pdf">local gateway</a></li>		</ul>
+				<h2><a href="http://libgenfrialc7tguyjywa36vtrdcplwpxaw43h6o63dmmwhvavo5rqqd.onion/LG/02197000/a563d59d3f5b497740badf1429548e98/John%20Asimakopoulos%2C%20Richard%20Gilman-Opalsky%20%28eds.%29%20-%20Against%20Capital%20in%20the%20Twenty-First%20Century_%20A%20Reader%20of%20Radical%20Undercurrents-Temple%20University%20Press%20%282018%29.pdf">download from the Tor mirror</a><br><span style="font-size:70%">(make sure you're accessing via <a href="https://www.howtogeek.com/272049/how-to-access-.onion-sites-also-known-as-tor-hidden-services/">Tor</a>)</span></h2>
+		</div>
+				<h1>Against Capital in the Twenty-First Century: A Reader of Radical Undercurrents</h1>
+		<div><img src="/covers/2197000/a563d59d3f5b497740badf1429548e98-g.jpg" alt="cover"></div>
+		<p>Author(s): John Asimakopoulos, Richard Gilman-Opalsky (eds.)</p>				<p>Publisher: Temple University Press, Year: 2018</p>
+		<p>ISBN: 978-1-4399-1357-4, 978-1-4399-1359-8</p>		<p style="text-align:center"><a href="https://www.worldcat.org/search?qt=worldcat_org_bks&q=Against%20Capital%20in%20the%20Twenty-First%20Century%3A%20A%20Reader%20of%20Radical%20Undercurrents&fq=dt%3Abks">Search in WorldCat</a> | <a href="https://www.goodreads.com/search?utf8=✓&query=Against%20Capital%20in%20the%20Twenty-First%20Century%3A%20A%20Reader%20of%20Radical%20Undercurrents">Search in Goodreads</a> | <a href="https://www.abebooks.com/servlet/SearchResults?tn=Against%20Capital%20in%20the%20Twenty-First%20Century%3A%20A%20Reader%20of%20Radical%20Undercurrents&pt=book&cm_sp=pan-_-srp-_-ptbook">Search in AbeBooks</a> | <a href="https://www.amazon.com/s/?url=search-alias%3Dstripbooks&field-keywords=Against%20Capital%20in%20the%20Twenty-First%20Century%3A%20A%20Reader%20of%20Radical%20Undercurrents">Search in Amazon.com</a></p>
+				<div>Description:<br>"Against Capital in the Twenty-First Century makes a formidable-and highly original-contribution to the literature. The central themes and arguments advanced in the volume, which are always stimulating and provocative, enjoy a direct relevance for many central and increasingly urgent interdisciplinary debates across the social sciences. Empowering and liberating in equal measure, a particular strength is the richness, nuance, and impressive depth of insight and analysis, driven by an uncompromised intent to move society beyond the entrenched and intersectional crises faced at this time. Finally, the choice of intellectuals, all recognized as leading scholars in their own fields-both past and present-with which to capture and animate the book's content, serves to further strengthen its excellent quality and relevance. In short, I hope that it will be read widely, and repeatedly." <br />
+—Richard J. White, Reader in Human Geography, Sheffield Hallam University<br />
+<br />
+The problems of capitalism have been studied from Karl Marx to Thomas Piketty. The latter has recently confirmed that the system of capital is deeply bound up in ever-growing inequality without challenging the continuance of that system. Against Capital in the Twenty-First Century presents a diversity of analyses and visions opposed to the idea that capital should have yet another century to govern human and non-human resources in the interest of profit and accumulation. The editors and contributors to this timely volume present alternatives to the whole liberal litany of administered economies, tax policy recommendations, and half-measures. They undermine and reject the logic of capital, and the foregone conclusion that the twenty-first century should be given over to capital just as the previous two centuries were.Providing a deep critique of capitalism, based on assessment from a wide range of cultural, social, political, and ecological thinking, Against Capital in the Twenty-First Century insists that transformative, revolutionary, and abolitionist responses to capital are even more necessary in the twenty-first century than they ever were.<br />
+<br />
+Contributors include: Franco "Bifo" Berardi, Hakim Bey, Murray Bookchin, Henry Charles Bukowski, Cornelius Castoriadis, Ralf Dahrendorf, Guy Debord, Raya Dunayevskaya, Martín Espada, Frantz Fanon, Silvia Federici, Alicia Garza, Henry Giroux, David Graeber, Robert Greenwald, Félix Guattari, David Stanley Hill, John Holloway, C.L.R. James, Selma James, KRS-One (Lawrence Parker), Staughton Craig Lynd, Peter McLaren, Angela Mitropoulos, James O'Connor, Fredy Perlman, Penelope Rosemont, Sayres Rudy, Stevphen Shukaitis, Marina Sitrin, Constantine D. Skordoulis, Isabelle Stengers, Raoul Vaneigem, John Zerzan</div>		</td>
+	<td class="ad"></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,5 +1,3 @@
-openAIkey = "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"
-
 import os
 import PdfReader
 import re
